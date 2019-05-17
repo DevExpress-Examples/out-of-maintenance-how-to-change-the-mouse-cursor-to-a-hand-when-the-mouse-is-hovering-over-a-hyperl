@@ -94,44 +94,24 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Pdf.v19.1.Core">
-      <Name>DevExpress.Pdf.v19.1.Core</Name>
+    <Reference Include="DevExpress.Data.v7.1">
+      <Name>DevExpress.Data.v7.1</Name>
+      <HintPath>..\..\..\..\..\Program Files\Common Files\DevExpress\.NET.v3\DevExpress.Data3.dll</HintPath>
       <AssemblyFolderKey>hklm\devexpress.net.v3</AssemblyFolderKey>
     </Reference>
-    <Reference Include="DevExpress.Office.v19.1.Core">
-      <Name>DevExpress.Office.v19.1.Core</Name>
+    <Reference Include="DevExpress.Utils.v7.1">
+      <Name>DevExpress.Utils.v7.1</Name>
+      <HintPath>..\..\..\..\..\Program Files\Common Files\DevExpress\.NET.v3\DevExpress.Utils3.dll</HintPath>
       <AssemblyFolderKey>hklm\devexpress.net.v3</AssemblyFolderKey>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v19.1.Core">
-      <Name>DevExpress.RichEdit.v19.1.Core</Name>
+    <Reference Include="DevExpress.XtraEditors.v7.1">
+      <Name>DevExpress.XtraEditors.v7.1</Name>
+      <HintPath>..\..\..\..\..\Program Files\Common Files\DevExpress\.NET.v3\DevExpress.XtraEditors3.dll</HintPath>
       <AssemblyFolderKey>hklm\devexpress.net.v3</AssemblyFolderKey>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v19.1.Export">
-      <Name>DevExpress.RichEdit.v19.1.Export</Name>
-      <AssemblyFolderKey>hklm\devexpress.net.v3</AssemblyFolderKey>
-    </Reference>
-    <Reference Include="DevExpress.Printing.v19.1.Core">
-      <Name>DevExpress.Printing.v19.1.Core</Name>
-      <AssemblyFolderKey>hklm\devexpress.net.v3</AssemblyFolderKey>
-    </Reference>
-    <Reference Include="DevExpress.Data.v19.1">
-      <Name>DevExpress.Data.v19.1</Name>
-      <AssemblyFolderKey>hklm\devexpress.net.v3</AssemblyFolderKey>
-    </Reference>
-    <Reference Include="DevExpress.Utils.v19.1">
-      <Name>DevExpress.Utils.v19.1</Name>
-      <AssemblyFolderKey>hklm\devexpress.net.v3</AssemblyFolderKey>
-    </Reference>
-    <Reference Include="DevExpress.XtraEditors.v19.1">
-      <Name>DevExpress.XtraEditors.v19.1</Name>
-      <AssemblyFolderKey>hklm\devexpress.net.v3</AssemblyFolderKey>
-    </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v19.1">
-      <Name>DevExpress.XtraPrinting.v19.1</Name>
-      <AssemblyFolderKey>hklm\devexpress.net.v3</AssemblyFolderKey>
-    </Reference>
-    <Reference Include="DevExpress.XtraGrid.v19.1">
-      <Name>DevExpress.XtraGrid.v19.1</Name>
+    <Reference Include="DevExpress.XtraGrid.v7.1">
+      <Name>DevExpress.XtraGrid.v7.1</Name>
+      <HintPath>..\..\..\..\..\program files\common files\devexpress\.net.v3\devexpress.xtragrid3.dll</HintPath>
       <AssemblyFolderKey>hklm\devexpress.net.v3</AssemblyFolderKey>
     </Reference>
     <Reference Include="System">
@@ -153,8 +133,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
+    <Content Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </Content>
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -163,10 +153,15 @@
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
